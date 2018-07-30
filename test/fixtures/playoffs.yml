@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fase: MyString
+  tournament: one
+
+two:
+  fase: MyString
+  tournament: two

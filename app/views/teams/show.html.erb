@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container"> 
+<div class="row">
+		<div class="col-sm-6">
+				<p>
+  <strong>Pais:</strong>
+  <%= @team.pais %>
+</p>
+
+<%= image_tag(@team.urlBandeira, :alt => "flag of team") %>
+		</div>
+		<div class="col-sm-6">
+		<p>
+  <strong>Jogador de destaque:</strong>
+  <%= @team.player.nome %>
+</p>
+
+<p>
+  <strong>Nacionalidade:</strong>
+  <%= @team.player.nacionalidade %>
+</p>
+
+<p>
+  <strong>Camisa:</strong>
+  <%= @team.player.numero %>
+</p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @team.player.descricao %>
+</p>
+
+<p>
+  <strong>Jogador de destaque:</strong>  
+  <%= image_tag(@team.player.urlImagem) %>
+</p>			
+		</div>
+</div>
+</div>
+
+
+
+
+
+<%= link_to 'Edit', edit_team_path(@team) %> |
+<%= link_to 'Back', teams_path %>

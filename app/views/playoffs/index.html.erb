@@ -1,0 +1,74 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+
+  <h1>Playoffs</h1>
+
+  <!-- <div class="row">
+    <% @playoffs.each do |playoff| %>    
+      <div class="col-sm-12" style="height: auto; border: 1px black">
+        <h3><%= playoff.fase %></h3>
+        <% playoff.partidas.each do |partida|  %>
+          <div class="row" style="margin: 40px;">
+            <div class="col-sm-4" style="height: auto; background-color: red">
+              <h3>Seleção 1</h3>
+            </div>
+            <div class="col-sm-4" style="text-align: center;">
+              <div class="row">
+                <div class="col-sm-12" style="  height: 30px; background-color: red">
+                  <h3>Gols</h3>
+                </div>
+                <div class="col-sm-6" style="height: 30px; background-color: red">
+                  <h3>Gols</h3>
+                </div>        
+                <div class="col-sm-6" style="height: 30px; background-color: red">
+                  <h3>Gols</h3>
+                </div>  
+              </div>                  
+            </div>                  
+            <div class="col-sm-4" style="height: auto; background-color: red">
+              <h3>Seleção 2</h3>
+            </div>        
+          </div> 
+        <% end -%>
+      </div>       
+    <% end -%>
+    </div>
+</div>   -->
+
+<% @playoffs.each do |playoff| %>
+    <div class="container" style=" border: solid 2px #8080806b; border-radius: 2%; padding: 5%; margin: 2% 0px 2% 0px;">  
+  <h1 style="text-align: center;"><%= playoff.fase %></h1>
+
+    <% playoff.partidas.each do |partida|%>    
+    
+    <div class="row" style="background-color: #f8f9fa; margin: 10px; border-radius: 10px 0px 10px 0px; min-height: 140px">      
+      <div class="col-sm-12" style=" height: auto; border-radius: 10px 0px 10px 0px;">
+                  <h3 style="text-align: center; ">Partida <%= partida.numero %></h3>
+            </div>
+            <div class="col-sm-2"> 
+                <%= image_tag(partida.teams.first.urlBandeira, :alt => "flag of team", :style =>"width: 50%; text-align: center;") %>
+            </div>
+            <div class="col-sm-2" style="height: auto;">
+              <h3 ><%= link_to partida.teams.first.pais, partida.teams.first %></h3>
+            </div>            
+            <div class="col-sm-4" style="text-align: center;">
+              <div class="row">                
+                <div class="col-sm-12" style="height: auto;">
+                  <h3 style="background-color: gray"><%= partida.resultado %></h3>
+                </div>                        
+              </div>                  
+            </div>                  
+            <div class="col-sm-2" style="height: auto;">
+              <h3 ><%= link_to partida.teams.last.pais, partida.teams.last %></h3>
+            </div>
+            <div class="col-sm-2"> 
+                <%= image_tag(partida.teams.last.urlBandeira, :alt => "flag of team", :style =>"width: 50%; text-align: center;") %>
+            </div>                    
+          </div> 
+          <hr style="background-color: darkgray; height: 2px;">          
+          <% end -%>                                      
+<%#= link_to 'Edit', edit_partida_path(partida) %> |
+<%#= link_to 'Back', groups_path %> 
+</div>
+
+<% end -%> 

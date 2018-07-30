@@ -1,0 +1,24 @@
+<div class="nested-fields">
+	<div class="field">
+		<%
+		if @tournament.groups.count == 0
+			opcao = "A"
+		else
+			opcao = @tournament.groups[f.index.to_i].grupo
+		end
+		%>
+		<%= f.label :grupo %>		
+		<%= f.select :grupo, options_for_select([
+			["A","A"],
+			["B","B"],
+			["C","C"],		
+			["D","D"],
+			["E","E"],
+			["F","F"],
+			["G","G"],
+			["H","H"],	
+			], opcao)%>				
+
+		<%= link_to_remove_association('[Remover]',f)%>
+	</div>	
+</div>

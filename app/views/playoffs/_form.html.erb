@@ -1,0 +1,27 @@
+<%= form_with(model: playoff, local: true) do |form| %>
+  <% if playoff.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(playoff.errors.count, "error") %> prohibited this playoff from being saved:</h2>
+
+      <ul>
+      <% playoff.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :fase %>
+    <%= form.text_field :fase, id: :playoff_fase %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tournament_id %>
+    <%= form.text_field :tournament_id, id: :playoff_tournament_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

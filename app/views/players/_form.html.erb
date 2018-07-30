@@ -1,0 +1,48 @@
+<%= form_with(model: player, local: true) do |form| %>
+  <% if player.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(player.errors.count, "error") %> prohibited this player from being saved:</h2>
+
+      <ul>
+      <% player.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome, id: :player_nome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :numero %>
+    <%= form.number_field :numero, id: :player_numero %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nacionalidade %>
+    <%= form.text_field :nacionalidade, id: :player_nacionalidade %>
+  </div>
+
+  <div class="field">
+    <%= form.label :urlImagem %>
+    <%= form.text_field :urlImagem, id: :player_urlImagem %>
+  </div>
+
+  <div class="field">
+    <%= form.label :descricao %>
+    <%= form.text_field :descricao, id: :player_descricao %>
+  </div>
+
+  <div class="field">
+    <%= form.label :team_id %>
+    <%= form.text_field :team_id, id: :player_team_id %>
+  </div>     
+
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

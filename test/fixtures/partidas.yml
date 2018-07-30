@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  numero: 1
+  resultado: MyString
+  data: 2018-07-28 03:40:14
+
+two:
+  numero: 1
+  resultado: MyString
+  data: 2018-07-28 03:40:14

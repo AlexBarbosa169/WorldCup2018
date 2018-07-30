@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+    <div class="container">
+      <h1 style="margin: 0px 0px 30px 0px; text-align: center">Fase de Grupos</h1>
+      <div class="row" style="width; margin: 0px 0px 30px 0px;">  
+    <% @groups.each do |group| %>    
+      <div class="col-sm-4" style="border: hidden;">
+        <div class="card" style="width: 18rem; margin: 10px; border-radius: 10px; border: solid 2px gray;">                
+          <div class="card-body" style="border-radius: 10px;">
+            <h5 class="card-title" style="text-align: center;background-color: darkgray;">Grupo <%= group.grupo %></h5>            
+            <div class="teams_group" style="background-color: #9e9e9ea3 ; padding: 10px;">
+              <% group.teams.each do |team| %>
+              <div class="row">
+                <div class="col-sm-6" style="border-radius: 20%;">
+                <p class="card-text"><strong><%= link_to team.pais, team, :style =>"color: white" %></strong></p>  
+              </div>
+              <div class="col-sm-6" style="border-radius: 20%;">                
+                <%if team.urlBandeira%>                                                                       
+                  <%= image_tag(team.urlBandeira, :alt => "flag of team", :style =>"max-width: 50px") %>
+                <% else %>
+                  <p class="card-text">Não tem bandeira</p>
+                <% end %>                
+              </div>  
+              </div>
+              
+            <% end %>                        
+            </div>            
+            <%= link_to 'Detalhes', group , :class => "btn btn-light", :style => "margin: 5px" %>                             
+            <%#= link_to 'Edit', edit_group_path(group) %>           
+            <%#= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %>            
+          </div>
+        </div>
+    </div>            
+  <% end %>            
+</div>
+</div>
+    
+

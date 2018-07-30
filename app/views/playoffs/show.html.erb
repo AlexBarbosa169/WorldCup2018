@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fase:</strong>
+  <%= @playoff.fase %>
+</p>
+
+<p>
+  <strong>Tournament:</strong>
+  <%= @playoff.tournament %>
+</p>
+
+<%= link_to 'Edit', edit_playoff_path(@playoff) %> |
+<%= link_to 'Back', playoffs_path %>

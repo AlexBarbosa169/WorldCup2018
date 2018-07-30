@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Titulo:</strong>
+  <%= @tournament.titulo %>
+</p>
+
+<p>
+  <strong>Pais:</strong>
+  <%= @tournament.pais %>
+</p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @tournament.descricao %>
+</p>
+
+<p>
+  <strong>Data:</strong>
+  <%= @tournament.data %>
+</p>
+
+<% @tournament.groups do |group| %>
+	<td><%= group.grupo %></td>
+<% end %>
+
+<% @tournament.groups.each do |group| %>
+    <tr>
+      <td><%= group.grupo %></td>
+    </tr>  
+<% end %>
+
+<% @tournament.playoffs.each do |playoff| %>
+    <tr>
+      <td><%= playoff.fase %></td>
+    </tr>  
+<% end %>
+
+<%= link_to 'Edit', edit_tournament_path(@tournament) %> |
+<%= link_to 'Back', tournaments_path %>

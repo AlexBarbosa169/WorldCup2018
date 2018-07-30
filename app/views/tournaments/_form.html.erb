@@ -1,0 +1,44 @@
+<%= form_with(model: tournament, local: true) do |form| %>
+  <% if tournament.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tournament.errors.count, "error") %> prohibited this tournament from being saved:</h2>
+
+      <ul>
+      <% tournament.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :titulo %>
+    <%= form.text_field :titulo, id: :tournament_titulo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pais %>
+    <%= form.text_field :pais, id: :tournament_pais %>
+  </div>
+
+  <div class="field">
+    <%= form.label :descricao %>
+    <%= form.text_field :descricao, id: :tournament_descricao %>
+  </div>
+
+  <div class="field">
+    <%= form.label :data %>
+    <%= form.datetime_select :data, id: :tournament_data %>
+  </div>
+
+  <div id="groups">
+    <%= f.fields_for :groups do |groups_fields| %>
+      <%= render partial:"group_fields", locals: {f: groups_fields} %>
+    <% end %>
+    <%= link_to_add_association('[Adicinar Grupo]',form, :groups) %>
+  </div>  
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
