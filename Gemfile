@@ -5,7 +5,10 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
+# criando Semantica
+gem "iq_rdf"
+# Spira Tentativa frustrada de inserir semantica
+gem 'spira'
 # Gem do cocoon, aninhamento de formulários
 gem 'cocoon'
 # 

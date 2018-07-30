@@ -2,24 +2,24 @@
 <div class="container" style="margin: auto;">   
   <h1 style="text-align: center; margin: 20px">Jogadores em Destaque</h1>
     
-    <% @players.each do |player| %>    
+    <% @players.each do |player| %> 
+
     <div class="row" style="margin: auto; margin-bottom: 10px; border-radius: 10px; padding: 10px; border: solid 2px gray;">  
-        <div class="col-sm-6">                                               
-          <p> <%= player.nome %> </p>
-          <p><%= player.numero %></p>
-          <p><%= player.nacionalidade %></p>                    
-          <p><%= player.descricao %></p>
-          <p><%= link_to 'Show', player %></p>
-          <p><%= link_to 'Edit', edit_player_path(player) %></p>
-          <p><%= link_to 'Destroy', player, method: :delete, data: { confirm: 'Are you sure?' } %></p>                  
+        <div vocab="http://schema.org/" typeof="Person" class="col-sm-6">                                               
+          <p property = "name"> <%= player.nome %> </p>
+          <p ><%= player.numero %></p>
+          <p property = "birthPlace" ><%= player.nacionalidade %></p>                    
+          <p property = "description" ><%= player.descricao %></p>
+          <p> <%= link_to 'Detalhes', player %></p>
+          <p><%#= link_to 'Edit', edit_player_path(player) %></p>
+          <p><%#= link_to 'Destroy', player, method: :delete, data: { confirm: 'Are you sure?' } %></p>                  
         </div>  
         <div class="col-sm-6">
-            <%= image_tag(player.urlImagem, :style =>"max-width: 300px") %>
+            <%= image_tag(player.urlImagem, :property => "image" , :style =>"max-width: 300px") %>
         </div>
-        </div>
-    <% end -%> 
-    
+        </div>        
 
+    <% end -%>           
 </div>
 
 <br>
