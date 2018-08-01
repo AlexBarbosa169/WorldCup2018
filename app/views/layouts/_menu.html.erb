@@ -4,10 +4,7 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="btn btn-light">
-        <a class="btn btn-light" href="#">Sobre a copa <span class="sr-only">(current)</span></a>
-      </li>
+    <ul class="navbar-nav">      
       <li class="btn btn-light">
         <!-- <a class="nav-link" href="#">Fase de Grupos</a> -->
         <%= link_to "Fase de Grupos", groups_path, :class => "btn btn-light"%>
@@ -21,8 +18,8 @@
       <li class="btn btn-light">        
         <%= link_to "Jogadores", players_path, :class => "btn btn-light"%>
       </li>
-      <li class="btn btn-light">
-        <a class="btn btn-light" href="#">O Campeão</a>
+      <li class="btn btn-light"> 
+        <%= link_to "O campeão", champion_champion_path, :class => "btn btn-light"%>        
       </li>
     </ul>
   </div>

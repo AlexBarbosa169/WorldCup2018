@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'champion/champion'
+
   resources :players
   resources :teams
   resources :playoffs

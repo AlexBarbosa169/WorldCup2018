@@ -42,14 +42,14 @@
     <% playoff.partidas.each do |partida|%>    
     
     <div class="row" style="background-color: #f8f9fa; margin: 10px; border-radius: 10px 0px 10px 0px; min-height: 140px">      
-      <div vocab="http://schema.org/" typeof="SportsEvent" class="col-sm-12" style=" height: auto; border-radius: 10px 0px 10px 0px;">
+      <div vocab="http://schema.org/" about="#Fifa_world_Cup_2018" typeof="SportsEvent" class="col-sm-12" style=" height: auto; border-radius: 10px 0px 10px 0px;">
                   <h3 style="text-align: center;"> <span property="identifier"> Partida <%= partida.numero %></span></h3>
             </div>            
             <div typeof="SportsTeam" class="col-sm-2"> 
                 <%= image_tag(partida.teams.first.urlBandeira, :alt => "flag of team", :style =>"width: 50%; text-align: center;",  :property => 'image') %>
             </div>
             <div class="col-sm-2" style="height: auto;">
-              <h3 ><%= link_to partida.teams.first.pais, partida.teams.first %></h3>
+              <h3 ><%= link_to partida.teams.first.pais, partida.teams.first, :property => "url" %></h3>
             </div>
             <div class="col-sm-4" style="text-align: center;">
               <div class="row">                
@@ -59,7 +59,7 @@
               </div>                  
             </div>                  
             <div typeof="SportsTeam" class="col-sm-2" style="height: auto;">
-              <h3 ><%= link_to partida.teams.last.pais, partida.teams.last %></h3>
+              <h3 ><%= link_to partida.teams.last.pais, partida.teams.last :property => "url" %></h3>
             </div>
             <div class="col-sm-2"> 
                 <%= image_tag(partida.teams.last.urlBandeira, :alt => "flag of team", :style =>"width: 50%; text-align: center;", :property => 'image') %>

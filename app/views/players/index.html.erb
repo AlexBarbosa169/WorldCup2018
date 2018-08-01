@@ -5,7 +5,7 @@
     <% @players.each do |player| %> 
 
     <div class="row" style="margin: auto; margin-bottom: 10px; border-radius: 10px; padding: 10px; border: solid 2px gray;">  
-        <div vocab="http://schema.org/" typeof="athlete" class="col-sm-6">                                               
+        <div vocab="http://schema.org/" about="#player_<%= player.nome %> typeof="athlete" class="col-sm-6">                                               
           <p property = "name"> <%= player.nome %> </p>
           <p property = "numberedPosition"><%= player.numero %></p>
           <p property = "birthPlace" ><%= player.nacionalidade %></p>                              
@@ -20,10 +20,11 @@
         </div>        
 
     <% end -%>           
+    <%= paginate(@players) %>
 </div>
 
 <br>
 
-<%= link_to 'New Player', new_player_path %>
+<%#= link_to 'New Player', new_player_path %>
 
 
