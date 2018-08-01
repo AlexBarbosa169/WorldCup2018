@@ -1,25 +1,51 @@
-# README
+# World Cup 2018
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+  O projeto World Cup 2018 é uma aplicação criada pelos alunos Alex Sandro e Gilberto Neto, que fazem parte do curso de Sistemas para Internet do Instituto Federal da Paraíba, e para a disciplina de Tópicos Especiais no período 2018.1. O projeto foi desenvolvido para mostrar o desenvolvimento de uma aplicação condizente com as melhores práticas de web-semântica, utilizando dados abertos em formato JSON-LD e RDF-a.
+  
+  A aplicação foi desenvolvida utilizando a linguagem Ruby, juntamente com o framework Rails, visando uma maior agilidade no processo de criação e desenvolvimento da mesma.
 
-Things you may want to cover:
 
-* Ruby version
+## Instalação
 
-* System dependencies
+Linux:
 
-* Configuration
+```sh
+rails:db create
+rails:db migrate
+rails db:server
+```
 
-* Database creation
+Pronto! Sua aplicação está funcionando!
 
-* Database initialization
+Windows (Use o GitBash ou o PowerShell, facilita a sua vida):
 
-* How to run the test suite
+```sh
+rails:db create
+rails:db migrate
+rails db:server
+```
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+## Configuração para Desenvolvimento
 
-* ...
-# WorldCup2018
+<h2>Ferramentas necessárias</h2>
+
+![MYSQL](http://presidio-ventures.com/wp-content/uploads/2018/02/MySQL-Logo-275.png)
+
+![RoR](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVTlnuZiVL5aNjwZebrf6uEJVOPHsQxb5xVRg3eba8yYD1tWcE)
+
+![Vagrant](https://www.datocms-assets.com/2885/1506457090-blog-vagrant-list.svg)
+
+<p>Nunca usou o Vagrant?? <a href="https://github.com/joshfng/railsbox">Clique aqui e seja feliz!</a>
+
+
+## Como Contribuir
+
+1. Faça o _fork_ do projeto (https://github.com/AlexBarbosa169/WorldCup2018)
+2. Crie uma _branch_ para sua modificação (`git checkout -b feature/fooBar`)
+3. Faça o _commit_ (`git commit -am 'Add some fooBar'`)
+4. _Push_ (`git push origin feature/fooBar`)
+5. Crie um novo _Pull Request_
+
+
+[wiki]: https://github.com/AlexBarbosa169/WorldCup2018/wiki
