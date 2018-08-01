@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180729134159) do
+ActiveRecord::Schema.define(version: 20180731015212) do
 
   create_table "group_teams", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.bigint "group_id"
@@ -89,6 +89,8 @@ ActiveRecord::Schema.define(version: 20180729134159) do
     t.string "urlBandeira"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "continente", limit: 100
+    t.string "descricao", limit: 2000
   end
 
   create_table "tournaments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

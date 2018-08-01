@@ -5,14 +5,14 @@
     <% @players.each do |player| %> 
 
     <div class="row" style="margin: auto; margin-bottom: 10px; border-radius: 10px; padding: 10px; border: solid 2px gray;">  
-        <div vocab="http://schema.org/" typeof="Person" class="col-sm-6">                                               
+        <div vocab="http://schema.org/" typeof="athlete" class="col-sm-6">                                               
           <p property = "name"> <%= player.nome %> </p>
-          <p ><%= player.numero %></p>
-          <p property = "birthPlace" ><%= player.nacionalidade %></p>                    
+          <p property = "numberedPosition"><%= player.numero %></p>
+          <p property = "birthPlace" ><%= player.nacionalidade %></p>                              
           <p property = "description" ><%= player.descricao %></p>
           <p> <%= link_to 'Detalhes', player %></p>
-          <p><%#= link_to 'Edit', edit_player_path(player) %></p>
-          <p><%#= link_to 'Destroy', player, method: :delete, data: { confirm: 'Are you sure?' } %></p>                  
+          <%#= link_to 'Edit', edit_player_path(player) %>
+          <%#= link_to 'Destroy', player, method: :delete, data: { confirm: 'Are you sure?' } %>                  
         </div>  
         <div class="col-sm-6">
             <%= image_tag(player.urlImagem, :property => "image" , :style =>"max-width: 300px") %>
@@ -25,3 +25,5 @@
 <br>
 
 <%= link_to 'New Player', new_player_path %>
+
+

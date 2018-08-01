@@ -3,20 +3,23 @@
 
 <div class="container" style="margin: auto;"> 
   <h1 style="text-align: center; margin: 20px">Seleções</h1>
-    <div class="row" style="margin: auto;">  
+  <p>Essas são as seleções que participaram da copa do mundo de 2018 no período de <span property="startDate"> 14/06/2018</span> a <span property="endDate">15/07/2018</span></p>
+    <div property="performers" class="row" style="margin: auto;">        
     <% @teams.each do |team| %>    
       <div class="col-sm-4" style="border-radius: 20%">
+        <span typeof="SportsTeam">
         <div class="card" style="width: 18rem; margin: 10px; margin: solid 2px darkgray;">                
-          <%= image_tag(team.urlBandeira, :alt => "flag of team", :style =>"width: 50%; margin:auto; margin-top:5px; border:solid black 1px") %>
+          <%= image_tag(team.urlBandeira, :alt => "flag of team", :style =>"width: 50%; margin:auto; margin-top:5px; border:solid black 1px", :property => "image") %>
           <div class="card-body">
-            <h5 class="card-title"><%= team.pais %></h5>
+            <h5 class="card-title"><span property = "name "><%= team.pais %></span></h5>
             <p class="card-text">Titulos</p>            
             <hr style="height: 2px">
-            <%= link_to 'Detalhes', team, :class => "btn btn-light" %>                            
+            <%= link_to 'Detalhes', team, :class => "btn btn-light", :property => "url"%>                            
             <%#= link_to 'Edit', edit_team_path(team) %>           
             <%#= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %>            
           </div>
         </div>        
+        </span>
     </div>            
 <% end %>          
 </div>

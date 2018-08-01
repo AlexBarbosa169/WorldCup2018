@@ -2,6 +2,7 @@
 	<div class="jumbotron" style="background-image: url(/assets/russia_jumbotron_2); background-size: cover; color: white; margin-top: 30px">
   <h1 class="display-4" style="color: white"><strong>A copa do Mundo da Russia</strong></h1>
   <p class="lead">A Copa do Mundo FIFA de 2018 foi a vigésima primeira edição deste evento esportivo, um torneio internacional de futebol masculino organizado pela Federação Internacional de Futebol (FIFA), que ocorreu na Rússia, anfitriã da competição pela primeira vez.</p>
+  <p class="lead">Foram 64 partidas, com onze cidades-sede, o campeonato começou a ser disputado em 14 deJunho de 2018 e terminou em 15 ded Julho de 2018.</p>
   <hr class="my-4">
   <p>Esta página contem as principais informações sobre o torneio realizado este ano no terririo russo. entre para acessar mais!</p>
   <p class="lead">
@@ -10,3 +11,26 @@
 </div>	
 </div>
 
+<script type="application/ld+json">
+{
+"@context": "http://schema.org",
+"@type": "SportsEvent",
+"name": "Fifa World Cup 2018",
+"location":{
+			"@type": "Country",
+            "name":"Rússia",
+            "address":{
+     			 "@type": "PostalAddress",
+      			 "addressCountry": "Rússia",
+      			 "addressRegion": "Europa"}  
+			},
+          	"description": "A Copa do Mundo FIFA de 2018 foi a vigésima primeira edição deste evento 	esportivo, um torneio internacional de futebol masculino organizado pela Federação Internacional de Futebol (FIFA), que ocorreu na Rússia, anfitriã da competição pela primeira vez.",
+            "startDate":"15/06/2018",
+            "endDate":"14/07/2018",
+            "organizer":{
+            	"@type":"Organization",
+                "name":"Fifa"
+            },
+"image":"http::localhost:3000/assets/russia_jumbotron_2"            
+    }
+</script>
