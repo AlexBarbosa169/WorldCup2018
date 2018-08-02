@@ -4,17 +4,18 @@
 				<h1><span property="name">2018 Fifa World Cup Russia</span></h1>    	   	    
 
 			<div property="performer" typeof="SportsTeam">
-			<p >
+			<!-- <p >
 			  <strong>Continente: </strong>  
 			  <span property="name" ><%= @champion.teams.first.continente %></span>
-			</p>			
+			</p> -->			
 			<p>
 			    <span> Bandeira oficial do país: </span>
 			    <%= image_tag(@champion.teams.first.urlBandeira, :alt => "flag of champion", :property => "image", :style => "border: solid 1px black") %>  
-			</p>
-			</div>
-			<p >
+			    <p >
 			  <strong>Resumo da vitória da <span property="name" >França</span></strong>
+			</p>
+			</p>
+			</div>			
 			  <br> 
 			  <br>     
 			
